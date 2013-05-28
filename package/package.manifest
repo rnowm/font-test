@@ -1,0 +1,14 @@
+{
+  "name": "Gradient performance",
+  "package_path": "https://rnowm.github.com/gradient-test/package/package.zip",
+  "size": 59859,
+  "version": "1.0",
+  "description": "Gradient performance demo App",
+  "launch_path": "app.html",
+  "orientation": ["portrait"],
+  "developer": {
+    "name": "Arnau March",
+    "url": "http://buildingfirefoxos.com"
+  },
+  "default_locale": "en"
+}
