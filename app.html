@@ -6,7 +6,7 @@
   <!-- Building blocks -->
   <link rel="stylesheet" href="style/headers.css">
   <link rel="stylesheet" href="style/app.css">
-  <link rel="stylesheet" href="style/responsive.css">
+  <!--link rel="stylesheet" href="style/responsive.css"-->
 </head>
 <body>
   <section id="index">
@@ -16,43 +16,14 @@
       </header>
     </section>
 
-    <section>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-
-    <section id="container"></section>
+    <section id="main">
+      <h1>H1 - headings: 11pt</h1>
+      <h2>H2 Subheadings: 7pt</h2>
+      <p>Body: 8pt</p>
+      <p class="medium">Body medium: 7pt</p>
+      <p class="small">Body small: 6.5pt</p>
+      <p class="mini">Body mini: 6pt</p>
+      <p class="micro">Body micro: 5.7pt</p>
   </section> <!-- end index -->
-
-  <script>
-    function addElements(element,cls,item) {
-      document.querySelector('#btn-action-1').className = '';
-      document.querySelector('#btn-action-2').className = '';
-      document.querySelector('#btn-action-3').className = '';
-      item.className = 'current';
-      container = document.querySelector('#container');
-      container.innerHTML = "";
-      var t0 = window.performance.now();
-      for (var i = 0; i < 1000; i ++) {
-        var header = document.createElement('div');
-        header.innerHTML =  '<header class="'+cls+'"><h1>Header '+ (i+1) +'</h1></header>';
-        container.appendChild(header);
-      }
-      var t1 = window.performance.now();
-      item.querySelector('.time').innerHTML = "time: " + Math.round((t1 - t0) * 100) / 100
-+ " msec";
-    }
-
-    document.querySelector('#btn-action-1').addEventListener ('click', function () {
-      addElements(document.querySelector('#index'),'image',this);
-    });
-
-    document.querySelector('#btn-action-2').addEventListener ('click', function () {
-      addElements(document.querySelector('#index'),'svg',this);
-    });
-
-    document.querySelector('#btn-action-3').addEventListener ('click', function () {
-      addElements(document.querySelector('#index'),'css',this);
-    });
-
-  </script>
 </body>
 </html>
